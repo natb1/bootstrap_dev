@@ -1,27 +1,16 @@
-*.py[co]
+# OS generated files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
+# backup files
+*.old
+._*
+*~
+._*
+*.swp
+*.bak
 
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
-.coverage
-.tox
-
-#Translations
-*.mo
-
-#Mr Developer
-.mr.developer.cfg
+#compilation files
+*.pyc
