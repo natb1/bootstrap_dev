@@ -17,14 +17,18 @@ set autoindent
 set number
 set colorcolumn=80
 
-:inoremap ( ()<Esc>i
-:inoremap { {}<Esc>i
-:inoremap [ []<Esc>i
-:inoremap < <><Esc>i
-:inoremap " ""<Esc>i
-:inoremap ' ''<Esc>i
+"navigation
+:nnoremap <tab> :buffers<cr>:buffer<space>
 
+":inoremap ( ()<Esc>i
+":inoremap { {}<Esc>i
+":inoremap [ []<Esc>i
+":inoremap < <><Esc>i
+":inoremap \" \""<Esc>i
+":inoremap ' ''<Esc>i
+
+"allow buffers to go into the backgroup without closing
 :set hidden
 
 "natural text
-:set textwidth=80
+"":set textwidth=80
