@@ -1,7 +1,4 @@
 ```
-git clone git@github.com:natb1/vimrc.git <path>
-```
-~/.vimrc :
-```
-source /<path>/vimrc/vimrc.vim
+git clone git@github.com:natb1/vimrc.git ~/vimrc
+ln -s ~/vimrc/vimrc.vim ~/.vimrc
 ```
