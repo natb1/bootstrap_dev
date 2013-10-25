@@ -34,13 +34,13 @@ autocmd FileType python setlocal colorcolumn=80
 "set autoindent
 
 "--- javascript
-autocmd FileType python setlocal shiftwidth=4
-autocmd FileType python setlocal tabstop=4
-autocmd FileType python setlocal softtabstop=4
-autocmd FileType python setlocal expandtab
-autocmd FileType python setlocal number
-autocmd FileType python setlocal colorcolumn=80
-autocmd FileType python setlocal autoindent
+autocmd FileType javascript setlocal shiftwidth=4
+autocmd FileType javascript setlocal tabstop=4
+autocmd FileType javascript setlocal softtabstop=4
+autocmd FileType javascript setlocal expandtab
+autocmd FileType javascript setlocal number
+autocmd FileType javascript setlocal colorcolumn=80
+autocmd FileType javascript setlocal autoindent
 
 "--- xml
 "let g:xml_syntax_folding=1
