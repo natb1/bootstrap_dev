@@ -1,13 +1,13 @@
 "vimrc
 set nocompatible
 
-"syntax on
+"--- global settings
 "open buffer list in normal mode using <tab>
 :nnoremap <tab> :buffers<cr>:buffer<space>
+"leader mapping for write command
+:nnoremap <leader>w :write<cr>
 "allow buffers to go into the backgroup without closing
 :set hidden
-"read buffered files on change
-":set autoread
 ":set  t_Co=256
 
 "--- vundle
@@ -18,7 +18,6 @@ call vundle#rc()
 
 "bundles
 Bundle 'gmarik/vundle'
-Bundle 'rosenfeld/conque-term'
 Bundle 'indentpython'
 
 filetype plugin indent on
@@ -31,6 +30,7 @@ autocmd FileType python setlocal expandtab
 autocmd FileType python setlocal number
 autocmd FileType python setlocal colorcolumn=80
 autocmd FileType python setlocal foldmethod=indent
+autocmd FileType python nnoremap <buffer> <leader>b Oimport pdb; pdb.set_trace()
 "handled by indentpython
 "set autoindent
 
