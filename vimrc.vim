@@ -30,6 +30,7 @@ autocmd FileType python setlocal softtabstop=4
 autocmd FileType python setlocal expandtab
 autocmd FileType python setlocal number
 autocmd FileType python setlocal colorcolumn=80
+autocmd FileType python setlocal foldmethod=indent
 "handled by indentpython
 "set autoindent
 
