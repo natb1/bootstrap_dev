@@ -8,6 +8,7 @@ set nocompatible
 :nnoremap <leader>w :write<cr>
 "allow buffers to go into the backgroup without closing
 :set hidden
+:set cursorcolumn
 ":set  t_Co=256
 
 "--- vundle
