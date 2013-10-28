@@ -6,6 +6,8 @@ set nocompatible
 :nnoremap <tab> :buffers<cr>:buffer<space>
 "leader mapping for write command
 :nnoremap <leader>w :write<cr>
+"reload and go to end of file (follow)
+:nnoremap <leader>f :edit<cr>G
 "allow buffers to go into the backgroup without closing
 :set hidden
 :set cursorcolumn
