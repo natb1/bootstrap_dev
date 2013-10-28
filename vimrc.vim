@@ -33,7 +33,7 @@ autocmd FileType python setlocal expandtab
 autocmd FileType python setlocal number
 autocmd FileType python setlocal colorcolumn=80
 autocmd FileType python setlocal foldmethod=indent
-autocmd FileType python nnoremap <buffer> <leader>b Oimport pdb; pdb.set_trace()
+autocmd FileType python nnoremap <buffer> <leader>b Oimport pdb; pdb.set_trace():write<cr>
 "handled by indentpython
 "set autoindent
 
