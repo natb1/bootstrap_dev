@@ -38,9 +38,9 @@ autocmd FileType python nnoremap <buffer> <leader>b Oimport pdb; pdb.set_trace()
 "set autoindent
 
 "--- javascript
-autocmd FileType javascript setlocal shiftwidth=4
-autocmd FileType javascript setlocal tabstop=4
-autocmd FileType javascript setlocal softtabstop=4
+autocmd FileType javascript setlocal shiftwidth=2
+autocmd FileType javascript setlocal tabstop=2
+autocmd FileType javascript setlocal softtabstop=2
 autocmd FileType javascript setlocal expandtab
 autocmd FileType javascript setlocal number
 autocmd FileType javascript setlocal colorcolumn=80
