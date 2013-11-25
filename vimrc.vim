@@ -37,6 +37,15 @@ autocmd FileType python nnoremap <buffer> <leader>b Oimport pdb; pdb.set_trace()
 "handled by indentpython
 "set autoindent
 
+"--- html
+autocmd FileType javascript setlocal shiftwidth=2
+autocmd FileType javascript setlocal tabstop=2
+autocmd FileType javascript setlocal softtabstop=2
+autocmd FileType javascript setlocal expandtab
+autocmd FileType javascript setlocal number
+autocmd FileType javascript setlocal colorcolumn=80
+autocmd FileType javascript setlocal autoindent
+
 "--- javascript
 autocmd FileType javascript setlocal shiftwidth=2
 autocmd FileType javascript setlocal tabstop=2
