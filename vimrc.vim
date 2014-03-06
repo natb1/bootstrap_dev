@@ -6,6 +6,9 @@ set nocompatible
 :nnoremap <tab> :buffers<cr>:buffer<space>
 "leader mapping for write command
 :nnoremap <leader>w :write<cr>
+"vimux leader shortcus
+:nnoremap <leader>p :VimuxPromptCommand<cr>
+:nnoremap <leader>r :VimuxRunLastCommand<cr>
 "reload and go to end of file (follow)
 :nnoremap <leader>f :edit<cr>G
 "allow buffers to go into the backgroup without closing
