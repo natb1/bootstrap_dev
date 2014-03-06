@@ -5,4 +5,6 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 mv ~/.bashrc ~/.bashrc.temp && cat ~/workspace/dotfiles/bashrc.sh ~/.bashrc.temp > ~/.bashrc && rm ~/.bashrc.temp
 ln -s ~/workspace/dotfiles/vimrc.vim ~/.vimrc
 vim +BundleInstall +qall
+git config --global user.email "nathan@natb1.com"
+git config --global user.name "Nathan Buesgens"
 ```
