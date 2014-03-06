@@ -59,6 +59,9 @@ autocmd FileType javascript setlocal number
 autocmd FileType javascript setlocal colorcolumn=80
 autocmd FileType javascript setlocal autoindent
 
+"--- markdown
+autocmd FileType markdown setlocal colorcolumn=80
+
 "--- xml
 "let g:xml_syntax_folding=1
 "au FileType xml setlocal foldmethod=syntax
