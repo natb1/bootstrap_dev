@@ -22,6 +22,7 @@ call vundle#rc()
 "bundles
 Bundle 'gmarik/vundle'
 Bundle 'indentpython'
+Bundle 'vimux'
 
 filetype plugin indent on
 
