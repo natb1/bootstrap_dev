@@ -16,6 +16,7 @@ set nocompatible
 :set cursorcolumn
 ":set  t_Co=256
 :syntax on
+:set ruler
 
 "--- vundle
 "filetype on
