@@ -15,6 +15,7 @@ set nocompatible
 :set hidden
 :set cursorcolumn
 ":set  t_Co=256
+:syntax on
 
 "--- vundle
 "filetype on
@@ -61,6 +62,7 @@ autocmd FileType javascript setlocal autoindent
 
 "--- markdown
 autocmd FileType markdown setlocal colorcolumn=80
+autocmd FileType markdown setlocal number
 
 "--- xml
 "let g:xml_syntax_folding=1
