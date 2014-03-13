@@ -14,9 +14,11 @@ set nocompatible
 "allow buffers to go into the backgroup without closing
 :set hidden
 :set cursorcolumn
-":set  t_Co=256
+:set  t_Co=256
 :syntax on
 :set ruler
+"makes the mac delete key work as expected
+:set backspace=indent,eol,start
 
 "--- vundle
 "filetype on
