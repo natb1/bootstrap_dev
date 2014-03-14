@@ -30,6 +30,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'indentpython'
 Bundle 'vimux'
+Bundle 'christoomey/vim-tmux-navigator'
 
 filetype plugin indent on
 
