@@ -1,3 +1,5 @@
+...dotfiles and scripts for bootstrapping a home environment.
+
 ```shell
 mkdir ~/workspace
 git clone https://github.com/natb1/dotfiles.git ~/workspace/dotfiles
@@ -11,4 +13,4 @@ git config --global user.name "Nathan Buesgens"
 ```
 
 ## TODO: 
-- install script
+- bootstrap script
