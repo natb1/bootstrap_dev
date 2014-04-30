@@ -1,4 +1,4 @@
-```
+```shell
 mkdir ~/workspace
 git clone https://github.com/natb1/dotfiles.git ~/workspace/dotfiles
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -9,3 +9,6 @@ vim +BundleInstall +qall
 git config --global user.email "nathan@natb1.com"
 git config --global user.name "Nathan Buesgens"
 ```
+
+## TODO: 
+- install script
