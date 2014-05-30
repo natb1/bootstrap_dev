@@ -1,4 +1,4 @@
-...dotfiles and scripts for bootstrapping a home environment.
+...dotfiles and scripts for bootstrapping a dev environment.
 
 ```shell
 mkdir ~/workspace
