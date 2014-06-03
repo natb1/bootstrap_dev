@@ -3,3 +3,7 @@ directory "/home/ec2-user/workspace" do
   group "ec2-user"
   action :create
 end
+
+git "/home/ec2-user/workspace/bootstrap_dev" do
+  repository "https://github.com/natb1/bootstrap_dev.git"
+end
