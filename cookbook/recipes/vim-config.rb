@@ -3,6 +3,6 @@
     owner "ec2-user"
     group "ec2-user"
     recursive true
-    action: create
+    action :create
   end
 end
