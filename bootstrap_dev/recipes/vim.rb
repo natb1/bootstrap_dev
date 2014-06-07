@@ -1,5 +1,5 @@
-template "/home/ec2-user/.gitconfig" do
-  source "gitconfig.erb"
+template "/home/ec2-user/.vimrc" do
+  source "vimrc.erb"
   owner "ec2-user"
   group "ec2-user"
 end
