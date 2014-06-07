@@ -19,7 +19,7 @@ remote_file "/home/ec2-user/.vim/autoload/pathogen.vim" do
   group "ec2-user"
 end
 
-git "/home/ec2-user/.vim/bundle" do
+git "/home/ec2-user/.vim/bundle/vim-colors-solarized" do
   repository "git://github.com/altercation/vim-colors-solarized.git"
   user "ec2-user"
   group "ec2-user"
