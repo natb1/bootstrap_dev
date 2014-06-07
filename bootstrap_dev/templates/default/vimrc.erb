@@ -1,0 +1,17 @@
+execute pathogen#infect()
+
+:set number
+:set colorcolumn=80
+:set cursorcolumn
+:set ruler
+:syntax on
+:set t_Co=256
+:set bg=dark
+:set mouse=a
+
+:nnoremap <tab> :buffers<cr>:buffer<space>
+:nnoremap <leader>w :write<cr>
+:map <ScrollWheelUp> <C-Y>
+:map <ScrollWheelDown> <C-E>
+
+:filetype plugin indent on
