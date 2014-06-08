@@ -4,7 +4,7 @@ directory "/home/ec2-user/workspace" do
   action :create
 end
 
-node[:workspace][:repositores].each do |name, url|
+node[:workspace][:repositories].each do |name, url|
   git name do
     repository url
     user "ec2-user"
