@@ -6,7 +6,7 @@ directory "/home/ec2-user/.ssh" do
 end
 
 if node[:ssh][:id_rsa]
-  file "/home/ec2-user/.ssh" do
+  file "/home/ec2-user/.ssh/id_rsa" do
     owner "ec2-user"
     group "ec2-user"
     mode "0400"
