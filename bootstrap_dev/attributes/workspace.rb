@@ -1,3 +1,4 @@
 default[:workspace][:repositories] = {
-  "bootstrap_dev" => "/home/ec2-user/workspace/bootstrap_dev"
+  "/home/ec2-user/workspace/bootstrap_dev" =>
+    "https://github.com/natb1/bootstrap_dev.git"
 }
