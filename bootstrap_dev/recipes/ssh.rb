@@ -15,3 +15,8 @@ if node[:ssh][:id_rsa]
   end
 end
 
+template "/home/ec2-user/.ssh/config" do
+  source "ssh_config.erb"
+  owner "ec2-user"
+  group "ec2-user"
+end
