@@ -5,5 +5,5 @@ bd_http = "https://github.com/natb1/bootstrap_dev.git"
 bootstrap_dev_url = node[:ssh][:id_rsa] ? bd_ssh : bd_http
 
 default[:workspace][:repositories] = {
-  "/home/ec2-user/workspace/bootstrap_dev" => bootstrap_dev_url
+  "bootstrap_dev" => bootstrap_dev_url
 }
