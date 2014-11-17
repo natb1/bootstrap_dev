@@ -1,7 +1,6 @@
 ...dotfiles and chef recipes for deploying a dev environment
 
 ## quickstart
-- prerequisites: git, chefdk
 ```
 $ git clone https://github.com/natb1/dev-infrastructure.git cookbooks/dev-infrastructure
 ```
