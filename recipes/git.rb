@@ -1,3 +1,7 @@
+package "git" do
+  action :install
+end
+
 template "/home/ec2-user/.gitconfig" do
   source "gitconfig.erb"
   owner "ec2-user"
