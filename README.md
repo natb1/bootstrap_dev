@@ -13,5 +13,5 @@ $ chef-client -z -o dev-infrastructure
 $ export CHEF_DRIVER=fog:AWS
 $ export AWS_ACCESS_KEY_ID=<my-aws-access-key-id>
 $ export AWS_SECRET_ACCESS_KEY=<my-aws-secret-access-key>
-$ chef-client -z -o dev-infrastructure::provision
+$ chef-client -z -o dev-infrastructure::aws-dev
 ```
