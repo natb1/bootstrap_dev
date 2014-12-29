@@ -9,3 +9,6 @@ machine 'selenium' do
   recipe 'dev-infrastructure'
   recipe 'dev-infrastructure::selenium'
 end
+
+# /usr/bin/Xvfb :99 -ac -screen 0 1024x768x24 &
+# export DISPLAY=:99
