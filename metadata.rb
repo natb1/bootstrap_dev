@@ -1,4 +1,4 @@
-name             'infrastructure-dev'
+name 'dev-infrastructure'
 
 depends 'chef-dk'
 depends 'selenium'
