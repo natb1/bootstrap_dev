@@ -3,7 +3,6 @@
 ## quickstart
 - `git clone https://github.com/natb1/dev-infrastructure.git`
 - [provision chefdk](https://downloads.chef.io/chef-dk/)
-- `berks install -b dev-infrastructure/Berksfile`
 - deploy (locally):
 ```
 berks vendor cookbooks -b dev-infrastructure/Berksfile
