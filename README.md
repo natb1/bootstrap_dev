@@ -11,7 +11,7 @@ sudo chef-client -z -o dev-infrastructure
 - or, configure the chef machine resource, provision, and deploy (AWS):
 ```
 export CHEF_DRIVER=fog:AWS
-# add key to environment or add provisioner to 
+# add key to environment or add provisioner to appropriate IAM role
 export AWS_ACCESS_KEY_ID=<my-aws-access-key-id>
 export AWS_SECRET_ACCESS_KEY=<my-aws-secret-access-key>
 chef-client -z -o dev-infrastructure::aws-dev
