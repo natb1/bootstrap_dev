@@ -4,21 +4,21 @@
 ### privision a provisioner
 - [deploy chefdk](https://downloads.chef.io/chef-dk/)
 - `git clone https://github.com/natb1/dev-infrastructure.git`
+- `berks vendor cookbooks -b dev-infrastructure/Berksfile`
 
 ### deploy dev environment (locally):
 ```
-berks vendor cookbooks -b dev-infrastructure/Berksfile
 sudo chef-client -z -o dev-infrastructure
 ```
 
-### or, provision and deploy dev environment (using chef machine on AWS)
-- add key to provisioner environment or add provisioner to appropriate IAM role
+### or, provision and deploy dev environment (using chef provisioning on AWS)
+- deploy chef-provisioning
 ```
-export AWS_ACCESS_KEY_ID=$MY_AWS_ACCESS_KEY_ID
-export AWS_SECRET_ACCESS_KEY=$MY_AWS_SECRET_ACCESS_KEY
+gem install chef-provisioning chef-provisioning-fog
 ```
+- add provisioner to appropriate IAM role (TODO: actually this doesn't work, chef-provisioner requires a non standard `aws configure`)
 - provision and deploy
 ```
 export CHEF_DRIVER=fog:AWS
-chef-client -z -o dev-infrastructure::aws-dev
+chef-client -z dev-infrastructure/recipes/aws-micro.rb dev-infrastructure/recipes/dev.rb
 ```
