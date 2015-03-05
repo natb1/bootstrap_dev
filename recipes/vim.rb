@@ -25,3 +25,8 @@ git "/home/ec2-user/.vim/bundle/vim-colors-solarized" do
   group "ec2-user"
 end
 
+git "/home/ec2-user/.vim/bundle/vim-javascript" do
+  repository "git://github.com/pangloss/vim-javascript.git"
+  user "ec2-user"
+  group "ec2-user"
+end

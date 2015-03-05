@@ -19,3 +19,9 @@ execute pathogen#infect()
 :map <ScrollWheelDown> <C-E>
 
 :filetype plugin indent on
+
+"--- TODO: should this be part of vim-javascript
+autocmd FileType javascript setlocal shiftwidth=2
+autocmd FileType javascript setlocal tabstop=2
+autocmd FileType javascript setlocal softtabstop=2
+autocmd FileType javascript setlocal expandtab
