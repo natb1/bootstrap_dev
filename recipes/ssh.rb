@@ -1,22 +1,22 @@
-directory "/home/ec2-user/.ssh" do
-  owner "ec2-user"
-  group "ec2-user"
+directory "/home/#{node[:ssh][:user]}/.ssh" do
+  owner "#{node[:ssh][:user]}"
+  group "#{node[:ssh][:user]}"
   mode "0700"
   action :create
 end
 
 if node[:ssh][:id_rsa]
-  file "/home/ec2-user/.ssh/id_rsa" do
-    owner "ec2-user"
-    group "ec2-user"
+  file "/home/#{node[:ssh][:user]}/.ssh/id_rsa" do
+    owner "#{node[:ssh][:user]}"
+    group "#{node[:ssh][:user]}"
     mode "0400"
     content node[:ssh][:id_rsa]
     action :create
   end
 end
 
-template "/home/ec2-user/.ssh/config" do
+template "/home/#{node[:ssh][:user]}/.ssh/config" do
   source "ssh_config.erb"
-  owner "ec2-user"
-  group "ec2-user"
+  owner "#{node[:ssh][:user]}"
+  group "#{node[:ssh][:user]}"
 end
