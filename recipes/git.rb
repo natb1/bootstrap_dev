@@ -2,9 +2,13 @@ package "git" do
   action :install
 end
 
-template "/home/ec2-user/.gitconfig" do
-  source "gitconfig.erb"
-  owner "ec2-user"
-  group "ec2-user"
-  mode "0400"
+if node[:deploy][:user]
+
+  template "/home/#{node[:deploy][:user]}/.gitconfig" do
+    source "gitconfig.erb"
+    owner node[:deploy][:user]
+    group node[:deploy][:user]
+    mode "0400"
+  end
+
 end

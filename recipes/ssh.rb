@@ -1,22 +1,26 @@
-directory "/home/#{node[:ssh][:user]}/.ssh" do
-  owner "#{node[:ssh][:user]}"
-  group "#{node[:ssh][:user]}"
-  mode "0700"
-  action :create
-end
+if node[:deploy][:user]
 
-if node[:ssh][:id_rsa]
-  file "/home/#{node[:ssh][:user]}/.ssh/id_rsa" do
-    owner "#{node[:ssh][:user]}"
-    group "#{node[:ssh][:user]}"
-    mode "0400"
-    content node[:ssh][:id_rsa]
+  directory "/home/#{node[:deploy][:user]}/.ssh" do
+    owner "#{node[:deploy][:user]}"
+    group "#{node[:deploy][:user]}"
+    mode "0700"
     action :create
   end
-end
+  
+  if node[:deploy][:key]
+    file "/home/#{node[:deploy][:user]}/.ssh/id_rsa" do
+      owner "#{node[:deploy][:user]}"
+      group "#{node[:deploy][:user]}"
+      mode "0400"
+      content node[:deploy][:key]
+      action :create
+    end
+  end
+  
+  template "/home/#{node[:deploy][:user]}/.ssh/config" do
+    source "ssh_config.erb"
+    owner "#{node[:deploy][:user]}"
+    group "#{node[:deploy][:user]}"
+  end
 
-template "/home/#{node[:ssh][:user]}/.ssh/config" do
-  source "ssh_config.erb"
-  owner "#{node[:ssh][:user]}"
-  group "#{node[:ssh][:user]}"
 end

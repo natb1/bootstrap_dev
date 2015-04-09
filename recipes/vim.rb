@@ -1,32 +1,39 @@
-template "/home/ec2-user/.vimrc" do
-  source "vimrc.erb"
-  owner "ec2-user"
-  group "ec2-user"
-end
+if node[:deploy][:user]
 
-%w[ /home/ec2-user/.vim/autoload /home/ec2-user/.vim/bundle ].each do |path|
-  directory path do
-    owner "ec2-user"
-    group "ec2-user"
-    recursive true
-    action :create
+  template "/home/#{node[:deploy][:user]}/.vimrc" do
+    source "vimrc.erb"
+    owner node[:deploy][:user]
+    group node[:deploy][:user]
   end
-end
+  
+  [
+    "/home/#{node[:deploy][:user]}/.vim/autoload",
+    "/home/#{node[:deploy][:user]}/.vim/bundle"
+  ].each do |path|
+    directory path do
+      owner node[:deploy][:user]
+      group node[:deploy][:user]
+      recursive true
+      action :create
+    end
+  end
+  
+  remote_file "/home/#{node[:deploy][:user]}/.vim/autoload/pathogen.vim" do
+    source "https://tpo.pe/pathogen.vim"
+    owner node[:deploy][:user]
+    group node[:deploy][:user]
+  end
+  
+  git "/home/#{node[:deploy][:user]}/.vim/bundle/vim-colors-solarized" do
+    repository "git://github.com/altercation/vim-colors-solarized.git"
+    user node[:deploy][:user]
+    group node[:deploy][:user]
+  end
+  
+  git "/home/#{node[:deploy][:user]}/.vim/bundle/vim-javascript" do
+    repository "git://github.com/pangloss/vim-javascript.git"
+    user node[:deploy][:user]
+    group node[:deploy][:user]
+  end
 
-remote_file "/home/ec2-user/.vim/autoload/pathogen.vim" do
-  source "https://tpo.pe/pathogen.vim"
-  owner "ec2-user"
-  group "ec2-user"
-end
-
-git "/home/ec2-user/.vim/bundle/vim-colors-solarized" do
-  repository "git://github.com/altercation/vim-colors-solarized.git"
-  user "ec2-user"
-  group "ec2-user"
-end
-
-git "/home/ec2-user/.vim/bundle/vim-javascript" do
-  repository "git://github.com/pangloss/vim-javascript.git"
-  user "ec2-user"
-  group "ec2-user"
 end
