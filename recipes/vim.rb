@@ -1,3 +1,5 @@
+package 'vim'
+
 if node[:deploy][:user]
 
   template "/home/#{node[:deploy][:user]}/.vimrc" do
