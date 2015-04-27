@@ -1,4 +1,4 @@
-include_recipe 'dev-infrastructure::ssh'
-include_recipe 'dev-infrastructure::git'
-include_recipe 'dev-infrastructure::vim'
-include_recipe 'dev-infrastructure::tmux'
+include_recipe 'dev-deploy::ssh'
+include_recipe 'dev-deploy::git'
+include_recipe 'dev-deploy::vim'
+include_recipe 'dev-deploy::tmux'

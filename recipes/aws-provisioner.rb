@@ -6,6 +6,6 @@ machine 'provisioner' do
       :image_id => 'ami-b66ed3de',
       :flavor_id => 't2.micro'
     }
-  recipe 'dev-infrastructure'
-  recipe 'dev-infrastructure::chef-dk'
+  recipe 'dev-deploy'
+  recipe 'dev-deploy::chef-dk'
 end

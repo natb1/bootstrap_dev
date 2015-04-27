@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
   config.berkshelf.enabled = true
 
   config.vm.provision "chef_solo" do |chef|
-    chef.add_recipe "dev-infrastructure"
+    chef.add_recipe "dev-deploy"
     chef.json = {
       "deploy" => {
         "user" => "vagrant",
